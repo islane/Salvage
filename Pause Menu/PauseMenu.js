@@ -3,6 +3,7 @@
 //*******************************************************************************
 
 
+var pauseMenuSprite : Sprite;
 var pauseMenuFont : Font;
 private var pauseEnabled = false;			
 
