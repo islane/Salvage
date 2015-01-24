@@ -4,7 +4,7 @@ using System.Collections;
 public class MovableObj : MonoBehaviour {
 	GameObject player;
 	GameObject movableObj;
-	float distance = 10.0f;
+
 
 	// Use this for initialization
 	void Start () {
@@ -14,15 +14,8 @@ public class MovableObj : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-//		if (Input.GetKeyDown (KeyCode.E)) {
-//			// here is the once grabbing now climbing stuff
-//			distance = Vector2.Distance (this.transform.position, player.transform.position);
-//			if (distance < 2) {
-//				this.transform.parent = movableObj.transform;
-//				this.transform.localPosition = new Vector2 (0.18f, 0.48f);
-//				this.transform.localRotation = Quaternion.identity;
-//			}
-//		}
+		//below is hackish attempt to make the obj follow the pushreboot
+
 	}
 	void OnCollisionEnter2D(Collision2D collision){
 		transform.SetParent(collision.transform);
