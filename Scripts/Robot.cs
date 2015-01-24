@@ -24,10 +24,16 @@ public class Robot : MonoBehaviour {
 			if (Input.GetKey(KeyCode.A))
 			{
 				rigidBody2d.AddForce(new Vector2(-movement, 0.0f));
+				Vector2 scale = transform.localScale;
+				scale *= -1;
+				transform.localScale = scale;
 			}
 			if (Input.GetKey(KeyCode.D))
 			{
 				rigidBody2d.AddForce(new Vector2(movement, 0.0f));
+				Vector2 scale = transform.localScale;
+				scale *= 1;
+				transform.localScale = scale;
 			}
 			if (Input.GetKeyDown(KeyCode.Space))
 			{
