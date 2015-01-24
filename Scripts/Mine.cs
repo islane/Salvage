@@ -2,14 +2,14 @@
 using System.Collections;
 
 public class Mine : MonoBehaviour {
-
-	void OnTriggerEnter(Collider other){
-		Debug.Log ("Object enter trigger");
-	}
-	void OnTriggerStay(Collider other){
-		Debug.Log ("Object on trigger");
-	}
-	void OffTrigger(Collider other){
-		Debug.Log ("Object off the trigger");
+	public AudioClip audio;
+	void OnTriggerEnter2D(Collider2D other) {
+		if (other.gameObject.tag == "Player"){
+						Debug.Log ("Player hit the mine");
+			AudioSource.PlayClipAtPoint(audio, transform.position); 
+			Destroy(gameObject);
 		}
+		
+		
+	}
 }
