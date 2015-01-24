@@ -1,0 +1,41 @@
+Salvage/Library/*
+Salvage/ProjectSettings/*
+Salvage/Assembly-CSharp-vs.csproj
+Salvage/Assembly-CSharp.csproj
+Salvage/Salvage.sln
+Salvage/Salvage-csharp.sln
+
+# =============== #
+# Unity generated #
+# =============== #
+[Ll]ibrary/*
+[Pp]rojectSettings/*
+[Tt]emp/
+[Oo]bj/
+[Bb]uild
+[Ll]ibrary/
+sysinfo.txt
+ 
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+[Ee]xported[Oo]bj/
+/*.userprefs
+/*.csproj
+/*.pidb
+/*.suo
+/*.sln*
+/*.user
+/*.unityproj
+/*.booproj
+ 
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store*
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+[Tt]humbs.db
