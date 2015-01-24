@@ -8,10 +8,12 @@ public class JumpPad : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		other.rigidbody2D.AddForce (new Vector2(0.0f, bounce));
+
 	}
 	// Use this for initialization
-	void Start () {
-	
+	void Start () 
+	{
+		
 	}
 	
 	// Update is called once per frame
