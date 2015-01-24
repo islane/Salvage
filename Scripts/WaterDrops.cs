@@ -9,4 +9,11 @@ public class WaterDrops : MonoBehaviour {
 			clone = (Rigidbody2D)Instantiate(projectile, transform.position, transform.rotation);
 			clone.velocity = transform.TransformDirection(Vector3.down * 10);
 		}
-	}
+
+	void OnCollisionEnter2D(Collider2D other) {
+			if (other.gameObject.tag == "Floor") {
+					Debug.Log ("Water hit the floor");
+						Destroy (gameObject);
+				}
+		}
+}
