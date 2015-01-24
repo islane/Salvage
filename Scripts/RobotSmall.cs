@@ -5,6 +5,7 @@ public class RobotSmall : Robot {
 
 	//public AudioClip sound;
 	//AudioSource sound;
+
 	// Use this for initialization
 	void Start () {
 	
