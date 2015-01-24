@@ -10,6 +10,8 @@ public class Robot : MonoBehaviour {
 
 	public bool activated = false;
 
+	public bool current = false;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -17,7 +19,7 @@ public class Robot : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(activated)
+		if(current)
 		{
 			if (Input.GetKey(KeyCode.A))
 			{

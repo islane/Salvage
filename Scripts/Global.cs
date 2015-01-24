@@ -21,9 +21,9 @@ public class Global : MonoBehaviour {
 		{
 			if(robotSmall.activated)
 			{
-				currentRobot.activated = false;
+				currentRobot.current = false;
 				currentRobot = robotSmall;
-				currentRobot.activated = true;
+				currentRobot.current = true;
 			}
 		}
 
@@ -32,9 +32,9 @@ public class Global : MonoBehaviour {
 		{
 			if(robotJump.activated)
 			{
-				currentRobot.activated = false;
+				currentRobot.current = false;
 				currentRobot = robotJump;
-				currentRobot.activated = true;
+				currentRobot.current = true;
 			}
 		}
 	}
