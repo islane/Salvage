@@ -3,6 +3,14 @@ using System.Collections;
 
 public class DoorSwitch : MonoBehaviour {
 
+	public Door door;
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		//other.rigidbody2D.AddForce ();
+		door.Open();
+	}
+
 	// Use this for initialization
 	void Start () {
 	
