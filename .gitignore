@@ -1,5 +1,9 @@
 Salvage/Library/*
 Salvage/ProjectSettings/*
+Salvage/Assembly-CSharp-vs.csproj
+Salvage/Assembly-CSharp.csproj
+Salvage/Salvage.sln
+Salvage/Salvage-csharp.sln
 
 # =============== #
 # Unity generated #
