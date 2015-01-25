@@ -4,10 +4,11 @@ using System.Collections;
 public class Robot : MonoBehaviour {
 	
 	public Rigidbody2D rigidBody2d;
-
+	DrainBar drainbar = new DrainBar();//luke added this because he believes in encapsulation,
+	//futile as it is
 	public float movement = 10.0f;
 	public float jump;
-	public int batteryHealth = 100;
+	//public int batteryHealth = 100;
 	public bool activated = false;
 	//[System.NonSerialized]
 	public bool current = false;
@@ -15,10 +16,10 @@ public class Robot : MonoBehaviour {
 	public GameObject groundCheck;
 	public Global global;
 	
-	// Use this for initialization
-	public void SetBatteryHealth(int health){
-		batteryHealth = health;
-	}
+//	// Use this for initialization
+//	public void SetBatteryHealth(int health){
+//		batteryHealth = health;
+//	}
 
 
 
@@ -54,7 +55,7 @@ public class Robot : MonoBehaviour {
 				Jump(jump);
 			}
 			
-			if (batteryHealth == 0){
+			if (drainbar.CurrentBattery == 0){
 				Death();
 			}
 			
@@ -68,7 +69,7 @@ public class Robot : MonoBehaviour {
 		scale.x = -1;
 		transform.localScale = scale;
 		
-		batteryHealth -= 1;
+		drainbar.CurrentBattery -= 1;
 
 	}
 
@@ -80,14 +81,14 @@ public class Robot : MonoBehaviour {
 		scale.x = 1;
 		transform.localScale = scale;
 		
-		batteryHealth -= 1;
+		drainbar.CurrentBattery -= 1;
 
 	}
 	virtual public void Jump(float jump)
 	{
 		rigidBody2d.AddForce(new Vector2(0.0f, jump));
 		audio.Play ();
-		batteryHealth -= 1;
+		drainbar.CurrentBattery -= 1;
 
 	}
 

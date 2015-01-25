@@ -7,7 +7,6 @@ public class DrainBar : MonoBehaviour {
 	// float currentGraphScale = 1.0f;//draining speed vs bar drain speed
 	
 	public int drainRate;
-
 	public RectTransform batteryTransform;
 	private float cachedY;
 	private float minXValue;
