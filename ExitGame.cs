@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class ExitGame : MonoBehaviour {
-
+	public AudioClip audio;
 	// Use this for initialization
 	void Start () {
 	
@@ -14,8 +14,8 @@ public class ExitGame : MonoBehaviour {
 			
 			void OnTriggerEnter2D(Collider2D other) {
 				
-				if (other.gameObject.GetComponent<Robot>())
-				{	
+				if (other.gameObject.GetComponent<Robot>())	{
+					AudioSource.PlayClipAtPoint(audio, transform.position);
 					Debug.Log("Player Exit");
 					Application.LoadLevel("Level001");
 			}
