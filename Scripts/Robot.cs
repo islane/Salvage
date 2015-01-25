@@ -23,19 +23,9 @@ public class Robot : MonoBehaviour {
 
 
 	void Start () {
-		//groundCheck = transform.FindChild ("GroundCheck").gameObject;
+		groundCheck = transform.FindChild ("GroundCheck").gameObject;
 
-		//GameObject go = GameObject.Find ("Global");
 
-		//global = go.GetComponent<Global>();
-		/*if (global.currentRobot == this)
-		{
-			current = true;
-		}
-		else
-		{
-			current = false;
-		}*/
 	}
 	
 	// Update is called once per frame
@@ -75,7 +65,7 @@ public class Robot : MonoBehaviour {
 	{
 		rigidBody2d.AddForce(new Vector2(-movement, 0.0f));
 		Vector2 scale = transform.localScale;
-		//scale.x *= -1;
+		scale.x = -1;
 		transform.localScale = scale;
 		
 		batteryHealth -= 1;
@@ -87,7 +77,7 @@ public class Robot : MonoBehaviour {
 		rigidBody2d.AddForce(new Vector2(movement, 0.0f));
 		
 		Vector2 scale = transform.localScale;
-		//scale.x *= 1;
+		scale.x = 1;
 		transform.localScale = scale;
 		
 		batteryHealth -= 1;
