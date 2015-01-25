@@ -23,6 +23,9 @@ public class DrainBar : MonoBehaviour {
 			HandleBattery();
 		}
 	}
+	public int getMaxBattery(){
+		return maxBattery;
+	}
 
 	public Image visualLevel; 
 	// public Text batteryText; //for use with text readout of battery level
