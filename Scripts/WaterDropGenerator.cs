@@ -9,19 +9,19 @@ public class WaterDropGenerator : MonoBehaviour {
 
 	void Start()
 	{
-		projectile = GameObject.Find ("drop1");
+		//projectile = GameObject.Find ("drop1");
 		timer = 0;
 	}
 
-	void Update() {
+	void Update() 
+	{
 		timer++;
-		if (timer > delay) {
-						GameObject clone;
-						clone = (GameObject)Instantiate (projectile, transform.position, transform.rotation);
-						clone.GetComponent<Rigidbody2D> ().velocity = transform.TransformDirection (Vector3.down * 1);
+		if (timer > delay) 
+		{
+			GameObject clone;
+			clone = (GameObject)Instantiate (projectile, transform.position, transform.rotation);
+			clone.GetComponent<Rigidbody2D> ().velocity = transform.TransformDirection (Vector3.down * 1);
 			timer = 0;
-				}
 		}
-
-
+	}
 }
