@@ -4,14 +4,14 @@ using System.Collections;
 public class Global : MonoBehaviour {
 
 	public Robot currentRobot;
-
 	public Robot robotSmall;
 	public Robot robotJump;
+	public Robot robotPush;
 
 	//public 
 	// Use this for initialization
 	void Start () {
-	
+		
 	}
 	
 	// Update is called once per frame
@@ -23,19 +23,28 @@ public class Global : MonoBehaviour {
 			{
 				currentRobot.current = false;
 				currentRobot = robotSmall;
-				currentRobot.current = true;
+				//currentRobot.current = true;
 			}
 		}
-
-		
 		if(Input.GetKeyDown (KeyCode.Alpha2))
 		{
+			Debug.Log (robotJump.activated);
 			if(robotJump.activated)
 			{
 				currentRobot.current = false;
 				currentRobot = robotJump;
-				currentRobot.current = true;
+				//currentRobot.current = true;
 			}
 		}
+		if (Input.GetKeyDown (KeyCode.Alpha3))
+		{
+			if(robotPush.activated){
+				currentRobot.current = false;
+				currentRobot = robotPush;
+				//currentRobot.current = true;
+			}
+		}
+
+		currentRobot.current = true;
 	}
 }
