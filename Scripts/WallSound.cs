@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class WallSound : MonoBehaviour {
-
-	void OnTriggerEnter2D(Collider otherObj)
+	
+	void OnTriggerEnter2D(Collider2D otherObj)
 	{
 		
 		if (otherObj.tag == "player")

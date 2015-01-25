@@ -5,7 +5,7 @@ public class DoorSwitch : MonoBehaviour {
 
 	public Door door;
 
-	void OnTriggerEnter2D(Collider2D other)
+	void OnTriggerEnter2D()
 	{
 		//other.rigidbody2D.AddForce ();
 		door.Open();
