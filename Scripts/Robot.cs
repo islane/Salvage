@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Robot : MonoBehaviour {
@@ -31,36 +31,60 @@ public class Robot : MonoBehaviour {
 		{
 			if (Input.GetKey(KeyCode.A))
 			{
-				rigidBody2d.AddForce(new Vector2(-movement, 0.0f));
-		Vector2 scale = transform.localScale;
-				scale *= -1;
-				transform.localScale = scale;
-
-				batteryHealth -= 1;
-				print (batteryHealth);
-
+				MoveLeft (movement);
 			}
 			if (Input.GetKey(KeyCode.D))
 			{
-				rigidBody2d.AddForce(new Vector2(movement, 0.0f));
-
-				Vector2 scale = transform.localScale;
-				scale *= 1;
-				transform.localScale = scale;
-
-				batteryHealth -= 1;
-
+				MoveRight (movement);
 			}
 			if (Input.GetKeyDown(KeyCode.Space))
 			{
-				rigidBody2d.AddForce(new Vector2(0.0f, jump));
-				batteryHealth -= 1;
+				Jump(jump);
 			}
 
 			if (batteryHealth == 0){
-				Destroy(gameObject);
+				Death();
 			}
 
 		}
+	}
+
+	virtual public void MoveRight(float move)
+	{
+		rigidBody2d.AddForce(new Vector2(-movement, 0.0f));
+		Vector2 scale = transform.localScale;
+		scale.x *= -1;
+		transform.localScale = scale;
+		
+		batteryHealth -= 1;
+
+	}
+
+	virtual public void MoveLeft(float move)
+	{
+		rigidBody2d.AddForce(new Vector2(movement, 0.0f));
+		
+		Vector2 scale = transform.localScale;
+		scale.x *= 1;
+		transform.localScale = scale;
+		
+		batteryHealth -= 1;
+
+	}
+	virtual public void Jump(float jump)
+	{
+		rigidBody2d.AddForce(new Vector2(0.0f, jump));
+		batteryHealth -= 1;
+
+	}
+
+	virtual public void Damage(float dmg)
+	{
+
+	}
+
+	virtual public void Death()
+	{
+
 	}
 }

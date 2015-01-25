@@ -15,16 +15,20 @@ public class RobotSmall : Robot {
 	void Update () {
 		if (Input.GetKey(KeyCode.A))
 		{
-			rigidBody2d.AddForce(new Vector2(-movement, 0.0f));
+			MoveLeft (movement);
 		}
 		if (Input.GetKey(KeyCode.D))
 		{
-			rigidBody2d.AddForce(new Vector2(movement, 0.0f));
+			MoveRight (movement);
 		}
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
-			rigidBody2d.AddForce(new Vector2(0.0f, jump));
-			audio.Play(); 
+			Jump (jump);
 		}
+		
+		if (batteryHealth == 0){
+			Destroy(gameObject);
+		}
+
 	}
 }
