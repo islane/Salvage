@@ -52,10 +52,13 @@ public class DrainBar : MonoBehaviour {
 		currentBattery = maxBattery;
 
 	}
-	// // Update is called once per frame
-	// void Update () {
-	// 	drainBattery();
-	// }
+	 // Update is called once per frame
+	 void Update () {//below is check for death, TODO move some code from robot here or vice versa...
+		if (currentBattery <= 0) {
+
+			Application.LoadLevel("GameOver");
+		}
+	}
 	// public void OnGUI(){
 	// 	GUI.backgroundColor = Color.yellow;
 	// 	GUI.Button(new Rect(10, 40, 100 * currentGraphScale, 20), "Energy");
