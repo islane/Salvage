@@ -13,6 +13,14 @@ public class MenuManager : MonoBehaviour {
         Application.Quit();
 	}
 
+	public void OnClickCredits () {
+        Application.LoadLevel("Credits");
+	}
+
+	public void OnClickMain () {
+        Application.LoadLevel("MainMenu");
+	}
+
 	// Use this for initialization
 	void Start () {
 		CursorMode cursorMode = CursorMode.Auto;
