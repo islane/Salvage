@@ -38,7 +38,7 @@ public class Robot : MonoBehaviour {
 	{
 		grounded = Physics2D.Linecast(transform.position, groundCheck.transform.position);
 		//Debug.Log (grounded);
-		
+
 		if(current)
 		{
 			if (Input.GetKey(KeyCode.A))
