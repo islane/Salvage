@@ -6,10 +6,10 @@ public class BatterStation : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "Player") {
 			Debug.Log ("Player is charging");
-			Robot robot = other.gameObject.GetComponent<Robot>();
+			//Robot robot = other.gameObject.GetComponent<Robot>();
 			DrainBar drainbar = other.gameObject.GetComponent<DrainBar>();
 			Debug.Log ("Player is charged");
-			robot.SetBatteryHealth (drainbar.getMaxBattery());
+			drainbar.currentBattery=drainbar.getMaxBattery();
 			AudioSource.PlayClipAtPoint(audio, transform.position); 
 		}
 	}

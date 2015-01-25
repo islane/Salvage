@@ -3,6 +3,8 @@ using System.Collections;
 
 public class MenuManager : MonoBehaviour {
 
+	public Texture2D cursorTexture;
+
 	public void OnClickMenu () {
         Application.LoadLevel("Level001");
 	}
@@ -13,7 +15,13 @@ public class MenuManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Application.LoadLevel("MainMenu");
+		CursorMode cursorMode = CursorMode.Auto;
+		Vector2 hotSpot = Vector2.zero;
+        Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+		//Screen.showCursor = true;
+
+		Application.LoadLevel("MainMenu");
+
 	}
 	
 }

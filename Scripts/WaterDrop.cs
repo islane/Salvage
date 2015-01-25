@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class WaterDrop : MonoBehaviour {
+
+	public int damage = 10;
+
 	public AudioClip audio;
 	// Use this for initialization
 	void Start () {
@@ -14,10 +17,14 @@ public class WaterDrop : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		//if (other.gameObject.tag == "Floor") {
-			Debug.Log ("Water hit the floor");
-			AudioSource.PlayClipAtPoint(audio, transform.position);
-			Destroy (gameObject);
+
+		if (other.gameObject.GetComponent<Robot>())
+		{
+			other.gameObject.GetComponent<Robot>().Damage(damage);
+		}
+
+		AudioSource.PlayClipAtPoint(audio, transform.position);
+		Destroy (gameObject);
 		//}
 	}
 }
