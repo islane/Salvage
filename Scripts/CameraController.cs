@@ -3,11 +3,11 @@ using System.Collections;
 
 public class CameraController : MonoBehaviour {
 
-	public float speed = 5.0f;
+	//public float speed = 5.0f;
 	GameObject currentCharacter;
 
-	float xSmooth = 1.0f;
-	float ySmooth = 1.0f;
+	float xSmooth = 2.0f;
+	float ySmooth = 2.0f;
 	Global global;
 
 	// Use this for initialization
