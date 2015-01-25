@@ -30,25 +30,19 @@ public class Robot : MonoBehaviour {
 			if (Input.GetKey(KeyCode.A))
 			{
 				rigidBody2d.AddForce(new Vector2(-movement, 0.0f));
-<<<<<<< HEAD
 				Vector2 scale = transform.localScale;
 				scale *= -1;
 				transform.localScale = scale;
-=======
 				batteryHealth -= 1;
 				print (batteryHealth);
->>>>>>> 2c68afdddbc759d2c10b97ff98300f65c76e7196
 			}
 			if (Input.GetKey(KeyCode.D))
 			{
 				rigidBody2d.AddForce(new Vector2(movement, 0.0f));
-<<<<<<< HEAD
 				Vector2 scale = transform.localScale;
 				scale *= 1;
 				transform.localScale = scale;
-=======
 				batteryHealth -= 1;
->>>>>>> 2c68afdddbc759d2c10b97ff98300f65c76e7196
 			}
 			if (Input.GetKeyDown(KeyCode.Space))
 			{
