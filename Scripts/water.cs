@@ -3,8 +3,13 @@ using System.Collections;
 
 public class water : MonoBehaviour {
 
-	void OnTriggerEnter2D(Collider2D other) {
-		Debug.Log ("Player hit the mine"); 
-		Destroy(other);
+	public int damage = 3;
+
+	void OnTriggerStay2D(Collider2D other) {
+		if (other.gameObject.GetComponent<Robot>())
+		{
+			other.gameObject.GetComponent<Robot>().Damage(damage);
+		}
+
 	}
 }
