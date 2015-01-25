@@ -9,7 +9,7 @@ public class DoubleJumpRobot : Robot{
 
 	}
 	
-	// Update is called once per frame
+	// Update is0 called once per frame
 	void Update () {
 		if (Input.GetKey(KeyCode.A))
 		{
