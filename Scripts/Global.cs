@@ -8,6 +8,8 @@ public class Global : MonoBehaviour {
 	public Robot robotJump;
 	public Robot robotPush;
 
+	public DrainBar drainBar;
+
 	//public 
 	// Use this for initialization
 	void Start () {
@@ -23,7 +25,6 @@ public class Global : MonoBehaviour {
 			{
 				currentRobot.current = false;
 				currentRobot = robotSmall;
-				//currentRobot.current = true;
 			}
 		}
 		if(Input.GetKeyDown (KeyCode.Alpha2))
@@ -33,7 +34,6 @@ public class Global : MonoBehaviour {
 			{
 				currentRobot.current = false;
 				currentRobot = robotJump;
-				//currentRobot.current = true;
 			}
 		}
 		if (Input.GetKeyDown (KeyCode.Alpha3))
@@ -41,8 +41,12 @@ public class Global : MonoBehaviour {
 			if(robotPush.activated){
 				currentRobot.current = false;
 				currentRobot = robotPush;
-				//currentRobot.current = true;
 			}
+		}
+
+		if(Input.GetKeyDown (KeyCode.T))
+		{
+			drainBar.CurrentBattery -= 2;
 		}
 
 		currentRobot.current = true;
