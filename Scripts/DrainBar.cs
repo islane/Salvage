@@ -46,6 +46,7 @@ public class DrainBar : MonoBehaviour {
 		cachedY = batteryTransform.position.y;
 		maxXValue = batteryTransform.position.x;
 		minXValue = batteryTransform.position.x - batteryTransform.rect.width;
+		Debug.Log ("Minx value: "+minXValue);
 		currentBattery = maxBattery;
 
 	}
