@@ -48,8 +48,9 @@ GUI.skin.button.font = pauseMenuFont;
 	if(pauseEnabled == true){
 		
 		//Make a background box
-		GUI.Box(Rect(Screen.width /2 - 100,Screen.height /2 - 50,250,150), "");
+		GUI.Box(Rect(Screen.width /2 - 100,Screen.height /2 - 50,250,100), "");
 		
+/*
 		//Make Change Options button
 			if(GUI.Button(Rect(Screen.width /2 - 100,Screen.height /2 - 50 ,250,50), "Options")){
 			
@@ -60,6 +61,7 @@ GUI.skin.button.font = pauseMenuFont;
 				showOptionsDropDown = false;
 			}
 		}
+*/
 		
 /*
 		if(showOptionsDropDown == true){
@@ -89,12 +91,12 @@ GUI.skin.button.font = pauseMenuFont;
 */
 
 		//Make Main Menu button
-		if(GUI.Button(Rect(Screen.width /2 - 100,Screen.height /2 ,250,50), "Quit to Main Menu")){
+		if(GUI.Button(Rect(Screen.width /2 - 100,Screen.height /2 - 50,250,50), "Quit to Main Menu")){
 			Application.LoadLevel("MainMenu");
 		}
 		
 		//Make quit game button
-		if (GUI.Button (Rect (Screen.width /2 - 100,Screen.height /2 + 50,250,50), "Quit to Desktop")){
+		if (GUI.Button (Rect (Screen.width /2 - 100,Screen.height /2,250,50), "Quit to Desktop")){
 			Application.Quit();
 		}
 	}
