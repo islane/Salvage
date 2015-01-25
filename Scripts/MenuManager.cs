@@ -21,6 +21,15 @@ public class MenuManager : MonoBehaviour {
         Application.LoadLevel("MainMenu");
 	}
 
+
+	public void OnClick2Menu () {
+        Application.LoadLevel("IntroScene");
+	}
+
+	public void OnClick2Continue () {
+        Application.LoadLevel("Level001");
+	}
+
 	// Use this for initialization
 	void Start () {
 		CursorMode cursorMode = CursorMode.Auto;
