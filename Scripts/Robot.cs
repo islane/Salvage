@@ -72,7 +72,6 @@ public class Robot : MonoBehaviour {
 		scale.x = -1;
 		transform.localScale = scale;
 		
-		drainBar.currentBattery -= 1;
 		Drain();
 		
 	}
@@ -86,15 +85,13 @@ public class Robot : MonoBehaviour {
 		transform.localScale = scale;
 		
 		Drain();
-		drainBar.currentBattery -= 1;
-		
+
 	}
 	virtual public void Jump(float jump)
 	{
 		rigidBody2d.AddForce(new Vector2(0.0f, jump));
 		audio.Play ();
-		drainBar.currentBattery -= 1;
-		
+
 		Drain();
 	}
 	
@@ -115,6 +112,6 @@ public class Robot : MonoBehaviour {
 	
 	virtual public void Death()
 	{
-		
+		Application.LoadLevel ("GameOver");
 	}
 }
