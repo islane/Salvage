@@ -9,7 +9,7 @@ public class Robot : MonoBehaviour {
 	
 	public float movement = 10.0f;
 	public float jump;
-	public int batteryHealth = 100;
+	//public int batteryHealth = 100;
 	public bool activated = false;
 	//[System.NonSerialized]
 	public bool current = false;
@@ -20,9 +20,9 @@ public class Robot : MonoBehaviour {
 	int batteryDrain;
 	
 	// Use this for initialization
-	public void SetBatteryHealth(int health){
-		batteryHealth = health;
-	}
+//	public void SetBatteryHealth(int health){
+//		batteryHealth = health;
+//	}
 	
 	
 	
@@ -58,7 +58,7 @@ public class Robot : MonoBehaviour {
 				Jump(jump);
 			}
 			
-			if (batteryHealth == 0){
+			if (drainBar.currentBattery == 0){
 				Death();
 			}
 			
@@ -72,7 +72,7 @@ public class Robot : MonoBehaviour {
 		scale.x = -1;
 		transform.localScale = scale;
 		
-		//batteryHealth -= 1;
+		drainBar.currentBattery -= 1;
 		Drain();
 		
 	}
@@ -86,14 +86,14 @@ public class Robot : MonoBehaviour {
 		transform.localScale = scale;
 		
 		Drain();
-		//batteryHealth -= 1;
+		drainBar.currentBattery -= 1;
 		
 	}
 	virtual public void Jump(float jump)
 	{
 		rigidBody2d.AddForce(new Vector2(0.0f, jump));
 		audio.Play ();
-		//batteryHealth -= 1;
+		drainBar.currentBattery -= 1;
 		
 		Drain();
 	}
