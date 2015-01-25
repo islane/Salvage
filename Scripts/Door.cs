@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Door : MonoBehaviour {
 
-	
+	public bool isWinning = false;//open the right door and you win the game
 	public Rigidbody2D rigidBody;
 
 	void Start(){
