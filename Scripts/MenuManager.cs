@@ -4,7 +4,7 @@ using System.Collections;
 public class MenuManager : MonoBehaviour {
 
 	public void OnClickMenu () {
-        Application.LoadLevel("Test01");
+        Application.LoadLevel("Level001");
 	}
 
 	public void OnClickQuit () {
