@@ -9,8 +9,9 @@ public class Robot : MonoBehaviour {
 	public float jump = 300.0f;
 	public int batteryHealth = 100;
 	public bool activated = false;
-
 	public bool current = false;
+	bool grounded = false;
+	GameObject groundCheck;
 	
 	// Use this for initialization
 	public void SetBatteryHealth(int health){
@@ -20,12 +21,13 @@ public class Robot : MonoBehaviour {
 
 
 	void Start () {
-	
+		groundCheck = transform.FindChild ("GroundCheck").gameObject;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
+		grounded = Physics2D.Linecast(transform.position, groundCheck.transform.position);
 
 		if(current)
 		{
@@ -53,7 +55,7 @@ public class Robot : MonoBehaviour {
 	{
 		rigidBody2d.AddForce(new Vector2(-movement, 0.0f));
 		Vector2 scale = transform.localScale;
-		scale.x *= -1;
+		//scale.x *= -1;
 		transform.localScale = scale;
 		
 		batteryHealth -= 1;
@@ -65,7 +67,7 @@ public class Robot : MonoBehaviour {
 		rigidBody2d.AddForce(new Vector2(movement, 0.0f));
 		
 		Vector2 scale = transform.localScale;
-		scale.x *= 1;
+		//scale.x *= 1;
 		transform.localScale = scale;
 		
 		batteryHealth -= 1;
