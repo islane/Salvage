@@ -6,15 +6,20 @@ public class CameraController : MonoBehaviour {
 	public float speed = 5.0f;
 	GameObject currentCharacter;
 
+	float xSmooth = 1.0f;
+	float ySmooth = 1.0f;
+	Global global;
+
 	// Use this for initialization
 	void Start () {
-		Global global = GameObject.Find ("Global").GetComponent<Global>();
-		currentCharacter = global.currentRobot.gameObject;
+		global = GameObject.Find ("Global").GetComponent<Global>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		//Vector2 robotPosition = currentCharacter.transform.position;
-		//transform.position = new Vector3(robotPosition.x, robotPosition.y, 0.0f);//Vector2.Lerp(transform.position, robotPosition, Time.deltaTime * speed); 
+		currentCharacter = global.currentRobot.gameObject;
+		float targetX = Mathf.Lerp(transform.position.x, currentCharacter.transform.position.x, xSmooth * Time.deltaTime);
+		float targetY = Mathf.Lerp(transform.position.y, currentCharacter.transform.position.y, ySmooth * Time.deltaTime);
+		transform.position = new Vector3(targetX, targetY, transform.position.z);
 	}
 }

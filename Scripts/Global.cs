@@ -11,7 +11,7 @@ public class Global : MonoBehaviour {
 	//public 
 	// Use this for initialization
 	void Start () {
-	
+		
 	}
 	
 	// Update is called once per frame
@@ -19,29 +19,32 @@ public class Global : MonoBehaviour {
 
 		if(Input.GetKeyDown (KeyCode.Alpha1))
 		{
-			if(!(robotSmall.activated))
+			if(robotSmall.activated)
 			{
 				currentRobot.current = false;
 				currentRobot = robotSmall;
-				currentRobot.current = true;
+				//currentRobot.current = true;
 			}
 		}
 		if(Input.GetKeyDown (KeyCode.Alpha2))
 		{
-			if(!(robotJump.activated))
+			Debug.Log (robotJump.activated);
+			if(robotJump.activated)
 			{
 				currentRobot.current = false;
 				currentRobot = robotJump;
-				currentRobot.current = true;
+				//currentRobot.current = true;
 			}
 		}
 		if (Input.GetKeyDown (KeyCode.Alpha3))
 		{
-			if(!(robotPush.activated)){
+			if(robotPush.activated){
 				currentRobot.current = false;
 				currentRobot = robotPush;
-				currentRobot.current = true;
+				//currentRobot.current = true;
 			}
 		}
+
+		currentRobot.current = true;
 	}
 }

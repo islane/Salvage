@@ -13,22 +13,9 @@ public class RobotSmall : Robot {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey(KeyCode.A))
-		{
-			MoveLeft (movement);
-		}
-		if (Input.GetKey(KeyCode.D))
-		{
-			MoveRight (movement);
-		}
-		if (Input.GetKeyDown(KeyCode.Space))
-		{
-			Jump (jump);
-		}
-		
-		if (batteryHealth == 0){
-			Destroy(gameObject);
-		}
+		GetInput ();
 
 	}
+
+
 }

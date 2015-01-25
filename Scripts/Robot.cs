@@ -6,12 +6,14 @@ public class Robot : MonoBehaviour {
 	public Rigidbody2D rigidBody2d;
 
 	public float movement = 10.0f;
-	public float jump = 300.0f;
+	public float jump;
 	public int batteryHealth = 100;
 	public bool activated = false;
+	//[System.NonSerialized]
 	public bool current = false;
 	bool grounded = false;
-	GameObject groundCheck;
+	public GameObject groundCheck;
+	public Global global;
 	
 	// Use this for initialization
 	public void SetBatteryHealth(int health){
@@ -21,33 +23,51 @@ public class Robot : MonoBehaviour {
 
 
 	void Start () {
-		groundCheck = transform.FindChild ("GroundCheck").gameObject;
+		//groundCheck = transform.FindChild ("GroundCheck").gameObject;
+
+		//GameObject go = GameObject.Find ("Global");
+
+		//global = go.GetComponent<Global>();
+		/*if (global.currentRobot == this)
+		{
+			current = true;
+		}
+		else
+		{
+			current = false;
+		}*/
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		GetInput ();
 
+	}
+
+	virtual public void GetInput()
+	{
 		grounded = Physics2D.Linecast(transform.position, groundCheck.transform.position);
-
+		//Debug.Log (grounded);
+		
 		if(current)
 		{
 			if (Input.GetKey(KeyCode.A))
 			{
-				MoveLeft (movement);
+				MoveRight (movement);
 			}
 			if (Input.GetKey(KeyCode.D))
 			{
-				MoveRight (movement);
+				MoveLeft (movement);
 			}
 			if (Input.GetKeyDown(KeyCode.Space))
 			{
 				Jump(jump);
 			}
-
+			
 			if (batteryHealth == 0){
 				Death();
 			}
-
+			
 		}
 	}
 
@@ -76,6 +96,7 @@ public class Robot : MonoBehaviour {
 	virtual public void Jump(float jump)
 	{
 		rigidBody2d.AddForce(new Vector2(0.0f, jump));
+		audio.Play ();
 		batteryHealth -= 1;
 
 	}
