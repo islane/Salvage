@@ -7,8 +7,8 @@ public class BatterStation : MonoBehaviour {
 				if (other.gameObject.tag == "Player") {
 						Debug.Log ("Player is charged");
 						Robot robot = other.gameObject.GetComponent<Robot>();
-			DrainBar drainbar = other.gameObject.GetComponent<DrainBar>;
-						robot.SetBatteryHealth (drainbar.getMaxBattery);
+			DrainBar drainbar = other.gameObject.GetComponent<DrainBar>();
+						robot.SetBatteryHealth (drainbar.getMaxBattery());
 						AudioSource.PlayClipAtPoint(audio, transform.position); 
 				}
 		}
