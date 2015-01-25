@@ -16,7 +16,9 @@ public class Robot : MonoBehaviour {
 	public void SetBatteryHealth(int health){
 		batteryHealth = health;
 	}
-	
+
+
+
 	void Start () {
 	
 	}
