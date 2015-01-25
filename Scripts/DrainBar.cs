@@ -72,7 +72,7 @@ public class DrainBar : MonoBehaviour {
 
 		float currentXValue = MapValues(currentBattery, 0, maxBattery, minXValue, maxXValue);
 
-		batteryTransform.position = new Vector2(currentXValue, cachedY);
+		batteryTransform.position = new Vector3(currentXValue, cachedY);
 
 		if (currentBattery > maxBattery/2) //greater than 50% battery
 		{
