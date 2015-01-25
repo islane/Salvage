@@ -1,0 +1,62 @@
+Initialize engine version: 4.6.0b17 (2d43734a3870)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 4000 (ID=0x166)
+    Vendor:   Intel
+    VRAM:     32 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Adam\Google Drive\Projects\Unity\Salvage2\Assets\Salvage_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Adam\Google Drive\Projects\Unity\Salvage2\Assets\Salvage_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Adam\Google Drive\Projects\Unity\Salvage2\Assets\Salvage_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Adam\Google Drive\Projects\Unity\Salvage2\Assets\Salvage_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Adam\Google Drive\Projects\Unity\Salvage2\Assets\Salvage_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\Adam\Google Drive\Projects\Unity\Salvage2\Assets\Salvage_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: C:\Users\Adam\Google Drive\Projects\Unity\Salvage2\Assets\Salvage_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Adam\Google Drive\Projects\Unity\Salvage2\Assets\Salvage_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.186 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+Platform assembly: C:\Users\Adam\Google Drive\Projects\Unity\Salvage2\Assets\Salvage_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\Adam\Google Drive\Projects\Unity\Salvage2\Assets\Salvage_Data\Managed\System.Core.dll (this message is harmless)
+Level 'Credits' (-1) couldn't be loaded because it has not been added to the build settings.
+To add a level to the build settings use the menu File->Build Settings...
+ 
+(Filename:  Line: 271)
+
+Level 'Credits' (-1) couldn't be loaded because it has not been added to the build settings.
+To add a level to the build settings use the menu File->Build Settings...
+ 
+(Filename:  Line: 271)
+
+UnloadTime: 16.406725 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 350.
+Total: 3.165913 ms (FindLiveObjects: 0.062786 ms CreateObjectMapping: 0.031393 ms MarkObjects: 0.486599 ms  DeleteObjects: 0.736539 ms)
+
+Minx value: 453.0097
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+True
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Player Exit
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+UnloadTime: 4.048553 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 207.
+Total: 4.335924 ms (FindLiveObjects: 0.030186 ms CreateObjectMapping: 0.027167 ms MarkObjects: 0.470902 ms  DeleteObjects: 2.096723 ms)
+
+UnloadTime: 2.353304 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 250.
+Total: 2.358738 ms (FindLiveObjects: 0.035619 ms CreateObjectMapping: 0.036223 ms MarkObjects: 0.651415 ms  DeleteObjects: 0.025356 ms)
+
